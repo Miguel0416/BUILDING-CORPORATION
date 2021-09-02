@@ -14,7 +14,7 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,N
 -- -----------------------------------------------------
 -- Schema mydb
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `BUILDINGCORPORATION` DEFAULT CHARACTER SET utf8 ;
+CREATE SCHEMA IF NOT EXISTS `mydb` DEFAULT CHARACTER SET utf8 ;
 -- -----------------------------------------------------
 -- Schema proyecto
 -- -----------------------------------------------------
@@ -50,8 +50,8 @@ CREATE TABLE IF NOT EXISTS `proyecto`.`usuario_s` (
   `usuUsuSesion` VARCHAR(45) NULL,
   `usuEstado` INT NOT NULL,
   `usuRemember_Token` VARCHAR(45) NOT NULL,
-  `usu_created_at` TIMESTAMP NOT NULL DEFAULT 'CURRENT_TIMESTAMP',
-  `usuario_updated_at` TIMESTAMP NOT NULL DEFAULT 'CURRENT_TIMESTAMP',
+  `usu_created_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `usuario_updated_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`usuId`),
   UNIQUE INDEX `usuLogin_UNIQUE` (`usuLogin` ASC),
   UNIQUE INDEX `usuPassword_UNIQUE` (`usuPassword` ASC))
@@ -66,8 +66,8 @@ CREATE TABLE IF NOT EXISTS `mydb`.`usuario_s_rol` (
   `fechaUserRol` TIMESTAMP NOT NULL,
   `obsFechaUserRol` VARCHAR(45) NULL,
   `usuRolUsuSesion` VARCHAR(45) NOT NULL,
-  `created_at` TIMESTAMP NOT NULL,
-  `updated_at` TIMESTAMP NOT NULL,
+  `created_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `rol_rol_id_rol` INT(10) NOT NULL,
   `usuario_s_usuId` INT NOT NULL,
   INDEX `fk_usuario_s_rol_rol_idx` (`rol_rol_id_rol` ASC),
