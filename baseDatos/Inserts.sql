@@ -35,4 +35,17 @@ VALUES (1, '02/09/2021 04:06', 1, '02/09/2021 04:06', 1, 1, 'usaquen', 1, '02/09
        (5, '02/09/2021 04:25', 1, '02/09/2021 04:25', 5, 1, 'suba', 5, '02/09/2021 04:25', '');
 
 
-       
+INSERT INTO trabajador (tra_id, tra_primer_nombre, tra_segundo_nombre, tra_primer_apellido, tra_segundo_apellido,tra_estado, tra_sede_id, tra_tipo_documento_id,tra_created_at, tra_updated_at, tra_usuSesion, tra_autEstado)
+VALUES (1, 'Juan', 'Carlos', 'Olmos', 'Villalobos', 'activo', 1, 1, '02/09/2021 05:33', '00/00/2021 04:33','',0),
+       (2, 'Juan', 'Camilo', 'Olmos', 'Villalobos', 'activo', 1, 1, '02/07/2021 04:33', '00/00/2021 04:33','',0),
+       (3, 'Jheferson', 'Carlos', 'Jurado', 'Torres', 'activo', 1, 1, '02/05/2021 07:33', '00/00/2021 04:33','',1),
+       (4, 'Ronalt', 'Howell', 'Hughes', 'Kingdom', 'activo', 1, 1, '02/03/2021 03:33', '00/00/2021 04:33','',0),
+       (5, 'Margarita', 'Ignacia', 'saieh', 'Jasir', 'activo', 1, 1, '02/02/2021 04:33', '00/00/2021 04:33','',0),
+
+
+INSERT INTO material_construccion (mat_id, mat_nombre_material, mat_tipo_material, mat_precio, mat_created_at, mat_updated_at, mat_usuSesion)
+    (1001,'Ladrillo','general', 1000, '02/09/2021 04:34', '03/09/2021 15:34',''),
+    (2001,'cemento','pegante', 2500, '02/09/2021 12:34', '03/09/2021 21:34',''),
+    (1003,'Eternit','cubierta', 32000, '11/09/2021 04:34', '03/09/2021 15:34',''),
+    (1025,'Mosaicos','Ceramico', 11100, '04/09/2021 04:34', '03/09/2021 15:34',''),
+    (5061,'Vinilo','Pintura', 56000, '02/06/2021 04:34', '03/09/2021 15:34',''),
