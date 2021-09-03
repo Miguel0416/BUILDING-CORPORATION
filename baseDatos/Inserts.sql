@@ -44,8 +44,15 @@ VALUES (1, 'Juan', 'Carlos', 'Olmos', 'Villalobos', 'activo', 1, 1, '02/09/2021 
 
 
 INSERT INTO material_construccion (mat_id, mat_nombre_material, mat_tipo_material, mat_precio, mat_created_at, mat_updated_at, mat_usuSesion)
-    (1001,'Ladrillo','general', 1000, '02/09/2021 04:34', '03/09/2021 15:34',''),
+    VALUES (1001,'Ladrillo','general', 1000, '02/09/2021 04:34', '03/09/2021 15:34',''),
     (2001,'cemento','pegante', 2500, '02/09/2021 12:34', '03/09/2021 21:34',''),
     (1003,'Eternit','cubierta', 32000, '11/09/2021 04:34', '03/09/2021 15:34',''),
     (1025,'Mosaicos','Ceramico', 11100, '04/09/2021 04:34', '03/09/2021 15:34',''),
     (5061,'Vinilo','Pintura', 56000, '02/06/2021 04:34', '03/09/2021 15:34',''),
+
+INSERT INTO proyecto (pro_id, material_construccion_mat_id, pro_tipo_proyecto, pro_nombre_proyecto, pro_numero_proyecto, pro_descripcion_proyecto, pro_fecha_inicio, pro_fecha_fin, pro_estado, pro_sede_id, pro_recibido_id, pro_trabajador_id, pro_created_at, pro_updated_at, pro_usuSesion, pro_autEstado)
+    VALUES (203, 1001, 'Residencial', 'Axxis', '6758', "Descripcion del mismo", '02/09/2021 12:34', '03/09/2021 21:34', 'activo', 1, 2, 3465, '28/03/2021 04:34', '13/012/2021 15:34', '', 1),
+    (204, 2001, 'Residencial', 'El golf', '5458', "Descripcion del mismo", '02/09/2021 12:34', '03/09/2021 21:34', 'activo', 2, 2, 3466, '28/03/2020 04:34', '13/012/2021 15:34', '', 1),
+    (205, 1003, 'Residencial', 'Grattacielo', '6758', "Descripcion del mismo", '02/12/2021 12:34', '03/09/2021 21:34', 'activo', 3, 2, 3467, '28/05/2021 04:34', '13/012/2021 15:34', '', 1),
+    (206, 1025, 'Residencial', 'lAngolo', '8758', "Descripcion del mismo", '02/07/2021 12:34', '03/09/2019 21:34', 'inactivo', 4, 2, 3468, '28/03/2021 04:34', '13/012/2021 15:34', '', 1),
+    (207, 5061, 'Comercial', 'Buenavista', '9658', "Descripcion del mismo", '02/04/2020 12:34', '03/09/2021 21:34', 'activo', 5, 2, 3469, '28/03/2019 04:34', '13/012/2021 15:34', '', 1),
