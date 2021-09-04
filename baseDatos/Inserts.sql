@@ -53,7 +53,7 @@ VALUES (1, '03/09/2021 04:47', '03/09/2021 04:50', '03/09/2021 04:51', 1, 1, 1, 
 
             
 
-INSERT INTO utilizado
+INSERT INTO utilizado  
 
 INSERT INTO Stock (sto_id, sto_fecha_modificacion, sto_estado, sto created_at, sto_cantidad_almacenado,sto_autEstado, sto_recibido_id, sto_updated_at, sto_usuSesion, sto_utilizado_id)
 VALUES 
@@ -84,3 +84,23 @@ INSERT INTO proyecto (pro_id, material_construccion_mat_id, pro_tipo_proyecto, p
     (205, 1003, 'Residencial', 'Grattacielo', '6758', "Descripcion del mismo", '02/12/2021 12:34', '03/09/2021 21:34', 'activo', 3, 2, 3467, '28/05/2021 04:34', '13/012/2021 15:34', '', 1),
     (206, 1025, 'Residencial', 'lAngolo', '8758', "Descripcion del mismo", '02/07/2021 12:34', '03/09/2019 21:34', 'inactivo', 4, 2, 3468, '28/03/2021 04:34', '13/012/2021 15:34', '', 1),
     (207, 5061, 'Comercial', 'Buenavista', '9658', "Descripcion del mismo", '02/04/2020 12:34', '03/09/2021 21:34', 'activo', 5, 2, 3469, '28/03/2019 04:34', '13/012/2021 15:34', '', 1),
+
+
+
+
+    INSERT INTO registro (reg_id, reg_fecha_modificacion, reg_created_at, reg_comentarios, reg_autEstado, reg_numero_registro, reg_stock_id, reg_updated_at, reg_usuSesion)
+    VALUES (1, 03/09/2021, 04/09/2021,'no hubo problemas', 1, 16, 1, 04/09/2021, ''), 
+           (2, 04/09/2021, 05/09/2021,'retraso en la obra', 2, 14, 1, 05/09/2021, ''),  
+           (3, 05/09/2021, 06/09/2021,'accidente', 3, 10, 1, 06/09/2021, ''),  
+           (4, 06/09/2021, 07/09/2021,'todo en buen estado', 4, 06, 1, 07/09/2021, '');   
+
+
+
+
+
+
+
+
+
+
+
