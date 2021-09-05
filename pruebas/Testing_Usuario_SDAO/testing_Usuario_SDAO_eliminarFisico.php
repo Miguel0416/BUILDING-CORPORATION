@@ -1,16 +1,21 @@
-<?php
+<?php 
 
+include_once "../../modelos/ConBdMysql.php";
+include_once  "../../modelos/ConstantesConexion.php";
+include_once "../../modelos/modeloUsuario_S/Usuario_sDAO.php";
 
-include_once '../../modelos/ConstantesConexion.php';
-include_once PATH.'modelos/ConBdMysql.php';
-include_once PATH.'modelos/modeloLibros/LibroDAO.php';
+$registro[0]['usuLogin'] = "Henry";
+$registro[0]['usuPassword'] = "yo";
+$registro[0]['usuId'] = 1;
 
-$sId=array(129);
+$sId=array(8);
 
-$libros=new LibroDAO(SERVIDOR, BASE, USUARIO_BD, CONTRASENIA_BD);
+$usuario = new Usuario_sDAO(SERVIDOR, BASE, USUARIO_BD, CONTRASENIA_BD);
 
-$libroEliminadoFisico=$libros->eliminar($sId);
+$usuarioEliminadoFisico = $usuario -> eliminar($sId);
 
 echo "<pre>";
-print_r($libroEliminadoFisico);
+print_r($usuarioEliminadoFisico);
 echo "</pre>";
+
+?>

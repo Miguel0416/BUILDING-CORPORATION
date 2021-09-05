@@ -1,23 +1,20 @@
-<?php
+<?php 
 
+include_once "../../modelos/ConBdMysql.php";
+include_once  "../../modelos/ConstantesConexion.php";
+include_once "../../modelos/modeloUsuario_S/Usuario_sDAO.php";
 
-include_once '../../modelos/ConstantesConexion.php';
-include_once PATH.'modelos/ConBdMysql.php';
-include_once PATH.'modelos/modeloLibros/LibroDAO.php';
+$registro['usuId']=8;
+$registro['usuLogin']="camilo";
+$registro['usuPassword']="CAMILO1728";
+$registro['usuEstado']=1;
 
+$usuario = new Usuario_sDAO(SERVIDOR, BASE, USUARIO_BD, CONTRASENIA_BD);
 
-$registro['isbn']=128;
-$registro['titulo']="2252819 R1 CRUD INSERTAR";
-$registro['autor']="CAMILO";
-$registro['precio']="100000";
-$registro['categoriaLibro_catLibId']=2;
-
-
-$libros=new LibroDAO(SERVIDOR, BASE, USUARIO_BD, CONTRASENIA_BD);
-
-$libroInsertado=$libros->insertar($registro);
-
+$usuarioInsertado = $usuario -> insertar($registro);
 
 echo "<pre>";
-print_r($libroInsertado);
+print_r($usuarioInsertado);
 echo "</pre>";
+
+?>

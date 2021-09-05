@@ -1,17 +1,17 @@
-<?php
+<?php 
 
+include_once "../../modelos/ConBdMysql.php";
+include_once  "../../modelos/ConstantesConexion.php";
+include_once "../../modelos/modeloRol/RolDAO.php";
 
-include_once '../../modelos/ConstantesConexion.php';
-include_once PATH.'modelos/ConBdMysql.php';
-include_once PATH.'modelos/modeloLibros/LibroDAO.php';
+$rol = new RolDAO(SERVIDOR, BASE, USUARIO_BD, CONTRASENIA_BD);
 
-$sId=array(5);
+$sId=array(1);
 
-
-$libros=new LibroDAO(SERVIDOR, BASE, USUARIO_BD, CONTRASENIA_BD);
-
-$libroSeleccionado=$libros->seleccionarId($sId);
+$rolSeleccionado = $rol -> seleccionarId($sId);
 
 echo "<pre>";
-print_r($libroSeleccionado);
+print_r($rolSeleccionado);
 echo "</pre>";
+
+?>

@@ -1,17 +1,17 @@
-<?php
+<?php 
 
+include_once "../../modelos/ConBdMysql.php";
+include_once  "../../modelos/ConstantesConexion.php";
+include_once "../../modelos/modeloRol/RolDAO.php";
 
-include_once '../../modelos/ConstantesConexion.php';
-include_once PATH.'modelos/ConBdMysql.php';
-include_once PATH.'modelos/modeloLibros/LibroDAO.php';
+$rol = new RolDAO(SERVIDOR, BASE, USUARIO_BD, CONTRASENIA_BD);
 
-$sId=array(258);
+$sId=array(1);
 
-$libros=new LibroDAO(SERVIDOR, BASE, USUARIO_BD, CONTRASENIA_BD);
-
-
-$libroElimandoLogico=$libros->eliminarLogico($sId);
+$rolEliminadoLogico = $rol -> eliminarLogico($sId);
 
 echo "<pre>";
-print_r($libroElimandoLogico);
+print_r($rolEliminadoLogico);
 echo "</pre>";
+
+?>
