@@ -1,17 +1,17 @@
-<?php
+<?php 
 
+include_once "../../modelos/ConBdMysql.php";
+include_once  "../../modelos/ConstantesConexion.php";
+include_once "../../modelos/modeloConstructora/constructoraDAO.php";
 
-include_once '../../modelos/ConstantesConexion.php';
-include_once PATH.'modelos/ConBdMysql.php';
-include_once PATH.'modelos/modeloLibros/LibroDAO.php';
+$sId=array(1);
 
-$sId=array(5);
+$constructora = new ConstructoraDAO(SERVIDOR, BASE, USUARIO_BD, CONTRASENIA_BD);
 
-
-$libros=new LibroDAO(SERVIDOR, BASE, USUARIO_BD, CONTRASENIA_BD);
-
-$libroSeleccionado=$libros->seleccionarId($sId);
+$constructoraSeleccionada = $constructora -> seleccionarId($sId);
 
 echo "<pre>";
-print_r($libroSeleccionado);
+print_r($constructoraSeleccionada);
 echo "</pre>";
+
+?>
